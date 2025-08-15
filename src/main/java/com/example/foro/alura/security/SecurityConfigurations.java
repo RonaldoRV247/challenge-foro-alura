@@ -26,7 +26,17 @@ public class SecurityConfigurations {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/login").permitAll()
+                .requestMatchers(
+                    "/login",
+                    "/swagger-ui.html",
+                    "/swagger-ui/**",
+                    "/v3/api-docs/**",
+                    "/v2/api-docs/**",
+                    "/swagger-resources/**",
+                    "/webjars/**",
+                    "/configuration/ui",
+                    "/configuration/security"
+                ).permitAll()
                 .anyRequest().authenticated()
             )
             .formLogin(form -> form.disable())
