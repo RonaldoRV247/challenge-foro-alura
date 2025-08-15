@@ -10,6 +10,16 @@ API RESTful para la gestión de un foro educativo, desarrollada con Spring Boot,
 - Contraseñas cifradas
 - Documentación automática con Swagger
 
+## Documentación de la API
+
+- Ahora la documentación de la API se genera automáticamente con springdoc-openapi.
+- Para ver la documentación, accede a `/swagger-ui/index.html`.
+
+## Recomendaciones
+
+- Si tienes problemas con la documentación, asegúrate de tener solo la dependencia de springdoc-openapi en el pom.xml.
+- No es necesario crear una clase de configuración para Swagger.
+
 ## Instalación y ejecución
 1. Clona el repositorio.
 2. Configura la base de datos en `src/main/resources/application.properties`.
@@ -22,8 +32,7 @@ API RESTful para la gestión de un foro educativo, desarrollada con Spring Boot,
 
 ## Documentación Swagger
 - Accede a la documentación interactiva en:
-  - `http://localhost:8080/swagger-ui.html` (SpringFox Swagger 2)
-  - `http://localhost:8080/swagger-ui/index.html` (SpringFox Swagger 3)
+  - `http://localhost:8080/swagger-ui/index.html` (springdoc-openapi)
 
 ## Autenticación
 1. Realiza un POST a `/login` con:
@@ -91,4 +100,3 @@ API RESTful para la gestión de un foro educativo, desarrollada con Spring Boot,
 
 ## Autor
 - Desarrollado por Ronaldo Rivera para Alura Latam.
-
